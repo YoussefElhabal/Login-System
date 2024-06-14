@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Bootstrap Framework -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Main Template CSS File  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container my-5 text-center">
+        <div class="inputs w-75 p-5 m-auto">
+            <h1>Smart Login System</h1>
+            <div class="my-3">
+                <input type="text" class="form-control" id="signUpName" placeholder="Enter your name">
+            </div>
+            <p id="userNameAlert" class="text-danger d-none">May include _ having a length of 3 to 16 characters</p>
+            <div class="my-3">
+                <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email">
+            </div>
+            <p id="emailAlert" class="text-danger d-none">name@example.com</p>
+            <div class="my-3">
+                <input type="password" class="form-control" id="signUpPassword" aria-describedby="passwordHelpBlock" placeholder="Enter your password">
+            </div>
+            <p id="passwordAlert" class="text-danger d-none">Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long</p>
+            <p id="signUpmessage"></p>
+            <button class="btn btn-login my-3 w-100" id="signUpButton">Sign Up</button>
+            <p class="text-white">You have an account? <a class="text-white" href="index.html">Signin</a></p>
+        </div>
+    </div>
+    <!-- Bootstrap Framework -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS File -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
