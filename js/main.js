@@ -113,7 +113,6 @@ signUpButton?.addEventListener('click', function () {
     signUp();
 })
 
-
 // Log In
 
 const logInEmail = document.querySelector("#logInEmail");
