@@ -124,17 +124,18 @@ const logInButton = document.querySelector("#logInButton");
 function LogIn () {
     if (logInEmail.value == "" || logInPassword.value == "") {
     logInMessage.innerHTML = `<p class="text-danger" id="logInMessage"><i class="fa-solid fa-triangle-exclamation"></i> All inputs are required</p>`
-    }
-    for (let i = 0; i < allUsers.length; i++) {
-        if (allUsers[i].email.toLowerCase() == logInEmail.value.toLowerCase() && allUsers[i].password == logInPassword.value) {
-            logInMessage.innerHTML = `<p class="text-success" id="logInMessage"><i class="fa-solid fa-check"></i> Success</p>`
-            localStorage.setItem("userName", JSON.stringify(allUsers[i].name))
-            setTimeout(() => {
-                open('home.html', '_self');
-            }, 300);
-            return
-        } else {
-            logInMessage.innerHTML = `<p class="text-danger" id="logInMessage"><i class="fa-solid fa-triangle-exclamation"></i> Wrong email or password</p>`
+    } else {
+        for (let i = 0; i < allUsers.length; i++) {
+            if (allUsers[i].email.toLowerCase() == logInEmail.value.toLowerCase() && allUsers[i].password == logInPassword.value) {
+                logInMessage.innerHTML = `<p class="text-success" id="logInMessage"><i class="fa-solid fa-check"></i> Success</p>`
+                localStorage.setItem("userName", JSON.stringify(allUsers[i].name))
+                setTimeout(() => {
+                    open('home.html', '_self');
+                }, 300);
+                return
+            } else {
+                logInMessage.innerHTML = `<p class="text-danger" id="logInMessage"><i class="fa-solid fa-triangle-exclamation"></i> Wrong email or password</p>`
+            }
         }
     }
 }
